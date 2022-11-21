@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" type="text/css" href="Estilos/estilos.css">
+    <head>
+        <title>Cuidado con el perro</title>
+    </head>
+    <body>
+        <p> <center> <img src="cp.png" width="300" height="130" /> </center> </p><br><br>
+
+        <ul class="menu">
+            <li><a href="Cdp.html">Inicio</a></li>
+            <li><a href="Accesorios.html">Accesorios</a></li>
+            <li><a href="Hombre.html">Hombre</a></li>
+            <li><a href="Mujer.html">Mujer</a></li>
+            <li><a href="Opinion.html">Opiniones</a></li>
+        </ul>
+        <br><br>
+
+        <p> <center><img src="c1.jpg" width="990" height="420" /></center> </p>
+
+        <BR><BR>
+
+        <div class="texto">
+            <center><h3>Prendas de hombre</h3></center>
+
+            <center><div id="carrusel">
+        
+                <a href="#" class="left-arrow"><img src="f1.png" width="50" height="50"/></a>
+                <a href="#" class="right-arrow"><img src="f2.png" width="50" height="50"/></a>
+                <div class="carrusel">
+                    <div class="product" id="product_0">
+                        <img src="h.jpg" width="295" height="300" />
+                        <h5>Mezclilla negro</h5>
+                        </p>$165.00 </p>
+                    </div>
+                    <div class="product" id="product_1">
+                        <img src="h1.jpg" width="285" height="300" />
+                        <h5>Camiseta blanco con gris</h5>
+                        <p>$100.00 </p>
+                    </div>
+                    <div class="product" id="product_2">
+                        <img src="h2.jpg" width="285" height="300" />
+                        <h5>Pantalón de mezclilla</h5>
+                        <p>$250.00 </p>
+                    </div>
+                    <div class="product" id="product_3">
+                        <img src="h3.jpg" width="265" height="300" />
+                        <h5>Camiseta blanca con negro</h5>
+                        <p>$300.00 </p>
+                    </div>
+                    <div class="product" id="product_4">
+                        <img src="h4.jpg" width="295" height="300" />
+                        <h5>Sueter garfield</h5>
+                        <p>$165.00 </p>
+                    </div>
+                    <div class="product" id="product_5">
+                        <img src="h5.jpg" width="295" height="300" />
+                        <h5>Camisa blanca con grabado</h5>
+                        <p>$240.00 </p>
+                    </div>
+                </div>
+        
+        </script>
+        </center>
+        <br><br> <br>    
+            
+          
+               
+                    
+            
+            
+            <center>
+                <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+            <script>
+            var current = 0;
+            var imagenes = new Array();
+             
+            $(document).ready(function() {
+                var numImages = 6;
+                if (numImages <= 3) {
+                    $('.right-arrow').css('display', 'none');
+                    $('.left-arrow').css('display', 'none');
+                }
+             
+                $('.left-arrow').on('click',function() {
+                    if (current > 0) {
+                        current = current - 1;
+                    } else {
+                        current = numImages - 3;
+                    }
+             
+                    $(".carrusel").animate({"left": -($('#product_'+current).position().left)}, 600);
+             
+                    return false;
+                });
+             
+                $('.left-arrow').on('hover', function() {
+                    $(this).css('opacity','0.5');
+                }, function() {
+                    $(this).css('opacity','1');
+                });
+             
+                $('.right-arrow').on('hover', function() {
+                    $(this).css('opacity','0.5');
+                }, function() {
+                    $(this).css('opacity','1');
+                });
+             
+                $('.right-arrow').on('click', function() {
+                    if (numImages > current + 3) {
+                        current = current+1;
+                    } else {
+                        current = 0;
+                    }
+             
+                    $(".carrusel").animate({"left": -($('#product_'+current).position().left)}, 600);
+             
+                    return false;
+                }); 
+             });
+            </script>
+        
+
+            
+
+        </div></center>
+
+        <br><br><br><br><br><br><br><br><br><br>
+       
+    </body>
+</html>

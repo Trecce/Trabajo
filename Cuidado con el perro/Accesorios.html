@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" type="text/css" href="Estilos/estilos.css">
+    <head>
+        <title>Cuidado con el perro</title>
+    </head>
+    <body>
+        <p> <center> <img src="cp.png" width="300" height="130" /> </center> </p><br><br>
+
+        <ul class="menu">
+            <li><a href="Cdp.html">Inicio</a></li>
+            <li><a href="Accesorios.html">Accesorios</a></li>
+            <li><a href="Hombre.html">Hombre</a></li>
+            <li><a href="Mujer.html">Mujer</a></li>
+            <li><a href="Opinion.html">Opiniones</a></li>
+        </ul>
+        <br><br>
+
+        <p> <center><img src="c3.jpg" width="990" height="420" /></center> </p>
+
+        <BR><BR>
+
+        <div class="texto">
+            <center><h3>Accesorios</h3></center>
+
+            <center><div id="carrusel">
+        
+                <a href="#" class="left-arrow"><img src="f1.png" width="50" height="50"/></a>
+                <a href="#" class="right-arrow"><img src="f2.png" width="50" height="50"/></a>
+                <div class="carrusel">
+                    <div class="product" id="product_0">
+                        <img src="a.jpg" width="295" height="300" />
+                        <h5>Set arracadas</h5>
+                        </p>$40.00 </p>
+                    </div>
+                    <div class="product" id="product_1">
+                        <img src="a1.jpg" width="285" height="300" />
+                        <h5>Anillos variados</h5>
+                        <p>$95.00 </p>
+                    </div>
+                    <div class="product" id="product_2">
+                        <img src="a2.jpg" width="285" height="300" />
+                        <h5>Set collares</h5>
+                        <p>$70.00 </p>
+                    </div>
+                    <div class="product" id="product_3">
+                        <img src="a3.jpg" width="265" height="300" />
+                        <h5>3 Collares </h5>
+                        <p>$30.00 </p>
+                    </div>
+                    <div class="product" id="product_4">
+                        <img src="a4.jpg" width="295" height="300" />
+                        <h5>3 Anillos</h5>
+                        <p>$165.00 </p>
+                    </div>
+                    <div class="product" id="product_5">
+                        <img src="45.jpg" width="295" height="300" />
+                        <h5>Par de collares</h5>
+                        <p>$40.00 </p>
+                    </div>
+                </div>
+        
+        </script>
+        </center>
+        <br><br> <br>    
+            
+          
+               
+                    
+            
+            
+            <center>
+                <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+            <script>
+            var current = 0;
+            var imagenes = new Array();
+             
+            $(document).ready(function() {
+                var numImages = 6;
+                if (numImages <= 3) {
+                    $('.right-arrow').css('display', 'none');
+                    $('.left-arrow').css('display', 'none');
+                }
+             
+                $('.left-arrow').on('click',function() {
+                    if (current > 0) {
+                        current = current - 1;
+                    } else {
+                        current = numImages - 3;
+                    }
+             
+                    $(".carrusel").animate({"left": -($('#product_'+current).position().left)}, 600);
+             
+                    return false;
+                });
+             
+                $('.left-arrow').on('hover', function() {
+                    $(this).css('opacity','0.5');
+                }, function() {
+                    $(this).css('opacity','1');
+                });
+             
+                $('.right-arrow').on('hover', function() {
+                    $(this).css('opacity','0.5');
+                }, function() {
+                    $(this).css('opacity','1');
+                });
+             
+                $('.right-arrow').on('click', function() {
+                    if (numImages > current + 3) {
+                        current = current+1;
+                    } else {
+                        current = 0;
+                    }
+             
+                    $(".carrusel").animate({"left": -($('#product_'+current).position().left)}, 600);
+             
+                    return false;
+                }); 
+             });
+            </script>
+        
+
+            
+
+        </div></center>
+
+        <br><br><br><br><br><br><br><br><br><br>
+       
+    </body>
+</html>

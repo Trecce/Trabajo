@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" type="text/css" href="Estilos/estilos.css">
+    <head>
+        <meta charset="UTF-8">
+        <title>Compartenos tu experiencia con nosotros</title> 
+    </head>
+    <body>
+        <p> <center> <img src="cp.png" width="300" height="130" /> </center> </p>
+        
+        <BR><BR>
+
+
+            <ul class="menu">
+                <li><a href="Cdp.html">Inicio</a></li>
+                <li><a href="Accesorios.html">Accesorios</a></li>
+                <li><a href="Hombre.html">Hombre</a></li>
+                <li><a href="Mujer.html">Mujer</a></li>
+                <li><a href="Opinion.html">Opiniones</a></li>
+            </ul>
+
+        <BR><BR>
+            
+            <form action="Reservaciones.php" method="post">
+    
+        <div class="texto">
+            <H1><CENTER><FONT FACE=IMPACT COLOR=#D6D6D6> ¡Dejanos tu opinión aquí!
+            </FONT></CENTER></H1>
+            <HR>
+            <FONT FACE=Tahoma>
+            <DIV ALIGN=CENTER>
+            <TABLE BORDER=2 BORDERCOLOR=#A7CBFA CELLSPACING="2"
+            CELLPADDING="3"
+            WIDTH=50% BGCOLOR=#D8CE9E>
+            <TR>
+            <TD>
+            <DIV ALIGN=CENTER>
+            <form action="Reservaciones.php" method="post">
+            <label for="">Prenda de su elección:</label> 
+            <INPUT TYPE="text" NAME="pelicula" MAXLEGTH=40/>
+            <BR><BR>
+            Sucursal: <SELECT NAME="Sucursal"> id="">
+            <OPTION value="Cuidado con el perro galeana">Cuidado con el perro galeana</OPTION>
+            <OPTION value="Cuidado con el pelo colima">Cuidado con el pelo colima</OPTION>
+            <OPTION value="Cuidado con el perro tutuli">Cuidado con el perro tutuli</OPTION>
+            </SELECT>
+            
+            <BR><BR>
+            ¿Cómo calificas al personal? <input type="range" name="cal" min="0" max="10"
+            value="0"/><output for="cal" name="cal_value"> 6 </output>
+            <BR><BR>
+            ¡Compartenos tu experiencia y mejoremos juntos! <BR><BR><TEXTAREA ROWS="10"
+            COLS="40"></TEXTAREA>
+            <BR><BR>
+            <INPUT TYPE="submit" value="Enviar datos"/><INPUT TYPE="reset"
+            VALUE="Borrar">
+            </TD>
+            </TR>
+            </TABLE>
+            </form>
+            </DIV>
+            <BR><BR>
+        
+
+    </body>
+</html>
